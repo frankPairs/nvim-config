@@ -15,6 +15,7 @@ return {
 			vim.lsp.enable("astro")
 			vim.lsp.enable("ts_ls")
 			vim.lsp.enable("eslint")
+			vim.lsp.enable("gopls")
 
 			vim.lsp.config("*", {
 				capabilities = capabilities,
