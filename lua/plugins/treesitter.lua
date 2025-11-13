@@ -5,7 +5,7 @@ return {
 		local config = require("nvim-treesitter.configs")
 
 		config.setup({
-			ensured_installed = { "lua", "rust" },
+			ensured_installed = { "lua", "rust", "go" },
 			highlight = { enabled = true },
 			indent = { enabled = true },
 		})

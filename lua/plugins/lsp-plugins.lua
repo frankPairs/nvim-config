@@ -29,7 +29,7 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "rust_analyzer", "astro", "ts_ls", "eslint" },
+				ensure_installed = { "lua_ls", "rust_analyzer", "astro", "ts_ls", "eslint", "gopls" },
 			})
 		end,
 	},

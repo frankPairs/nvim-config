@@ -6,6 +6,7 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.formatting.gofmt,
 			},
 			-- This is necessary to add format on save
 			-- You can visit the source of the code on https://github.com/nvimtools/none-ls.nvim/wiki/Formatting-on-save
