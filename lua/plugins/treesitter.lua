@@ -6,7 +6,7 @@ return {
 
     config.setup({
       auto_install = true,
-      ensured_installed = { "lua", "rust", "go" },
+      ensured_installed = { "lua", "rust", "go", "javascript", "typescript" },
       highlight = { enabled = true },
       indent = { enabled = true },
     })
