@@ -5,6 +5,7 @@ return {
     local config = require("nvim-treesitter.config")
 
     config.setup({
+      build = "TSUpdate",
       auto_install = true,
       ensured_installed = { "lua", "rust", "go", "javascript", "typescript" },
       highlight = { enabled = true },
