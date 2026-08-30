@@ -13,9 +13,16 @@ return {
       vim.lsp.enable("rust_analyzer")
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("astro")
-      vim.lsp.enable("ts_ls")
       vim.lsp.enable("eslint")
       vim.lsp.enable("gopls")
+
+      vim.lsp.config('ts_ls', {
+        cmd = { 'typescript-language-server', '--stdio' },
+        filetypes = { 'typescript' },
+        root_dir = vim.fs.root(0, { 'package.json', '.git' }),
+        on_attach = on_attach,
+        capabilities = capabilities,
+      })
 
       vim.lsp.config("*", {
         capabilities = capabilities,
@@ -29,7 +36,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "rust_analyzer", "astro", "ts_ls", "eslint", "gopls" },
+        ensure_installed = { "lua_ls", "rust_analyzer", "astro", "eslint", "ts_ls", "gopls" },
       })
     end,
   },
