@@ -18,7 +18,7 @@ return {
 
       vim.lsp.config('ts_ls', {
         cmd = { 'typescript-language-server', '--stdio' },
-        filetypes = { 'typescript' },
+        filetypes = { 'typescript', 'typescriptreact' },
         root_dir = vim.fs.root(0, { 'package.json', '.git' }),
         on_attach = on_attach,
         capabilities = capabilities,
